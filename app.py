@@ -28,7 +28,7 @@ def profile(username):
 def generate_hint(problem, code, difficulty):
     client = OpenAI(
         # defaults to os.environ.get("OPENAI_API_KEY")
-        api_key="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",
+        api_key="Cannot share publicly.",
     )
 
     content = ("For the coding problem \"" + unquote(unquote(problem)) + "\" what is a "

@@ -28,7 +28,7 @@ function App () {
         if (success) {
           // setResponse(data.split('content=\'')[1].split('\'')[0]);
           setResponse(data);
-          setHistory("* " + prompt + "\n" + history)
+          setHistory("* " + prompt + "\n\n" + history)
         } else {
           setResponse('Invalid Input!');
         }

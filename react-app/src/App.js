@@ -19,6 +19,7 @@ function App () {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setResponse('Loading...')
     fetch('http://localhost:5000/generate/' + encodeURIComponent(encodeURIComponent(prompt))
       + "/" + encodeURIComponent(encodeURIComponent(attempt)) + "/" + diff + "/")
       .then(response => response.text())

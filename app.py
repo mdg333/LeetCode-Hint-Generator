@@ -34,16 +34,20 @@ def generate_hint(problem, code, difficulty):
     content = ("For the coding problem \"" + unquote(unquote(problem)) + "\" what is a "
            + difficulty + " hint for someone who has this code \"" + unquote(unquote(code)) + "\"?")
 
-    print()
-    print(content)
-    print()
+    # print()
+    # print(content)
+    # print()
 
     chat_completion = client.chat.completions.create(
         messages=[
             {
                 "role": "system",
-                "content": "You are a helpful assistant designed to provide coding hints. A small hint is purely"
-                           " conceptual. A medium hint can include some code. A large hint can include a lot of code."},
+                "content": "You are a helpful assistant designed to provide coding hints."
+                           " You verify that the hint matches the following hint levels:"
+                           " A small hint should be purely conceptual and brief."
+                           " A medium hint should be purely conceptual and verbose."
+                           " A large hint should include an incomplete solution with TODO statements."
+                           " A max hint should include a complete solution."},
             {
                 "role": "user",
                 "content": content,

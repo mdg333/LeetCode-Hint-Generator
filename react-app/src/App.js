@@ -48,13 +48,14 @@ function App () {
         <div className="Title">LeetCode Hint Generator</div>
         <div className="Dropdown-container">
           <div className="Dropdown-trigger" onClick={() => {setOpen(!open)}}>
-            <button className="Dropdown-button">Hint Difficulty</button>
+            <button className="Dropdown-button">Guidance Level</button>
           </div>
           <div className={'Dropdown-menu ' + (open ? 'active' : 'inactive')}>
             <ul>
               <div onClick={() => setDiff('small')}><DropdownItem text={'Small'}/></div>
               <div onClick={() => setDiff('medium')}><DropdownItem text={'Medium'}/></div>
               <div onClick={() => setDiff('large')}><DropdownItem text={'Large'}/></div>
+              <div onClick={() => setDiff('max')}><DropdownItem text={'Max'}/></div>
             </ul>
           </div>
         </div>
